@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody player;
+    Rigidbody2D player;
     float lateralSpeed = 0.1f;
     IController playerController;
 
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        player = GetComponent<Rigidbody>();
+        player = GetComponent<Rigidbody2D>();
         
     }
 
@@ -45,7 +45,7 @@ static class ControllerFactory
 
 public interface IController
 {
-    void CheckForButtonPressToPushPlayerUp(Rigidbody player);
+    void CheckForButtonPressToPushPlayerUp(Rigidbody2D player);
 
     void ReleasePlayer();
 }
@@ -54,11 +54,11 @@ public class PCController : IController
 {
     public float upwardsForce = 0.5f;
     
-    public void CheckForButtonPressToPushPlayerUp(Rigidbody player)
+    public void CheckForButtonPressToPushPlayerUp(Rigidbody2D player)
     {
         if(Input.GetKey("space"))
         {
-            player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode.Impulse);
+            player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
         }                
     }
 
@@ -71,7 +71,7 @@ public class PCController : IController
 
 public class MobileController : IController
 {    
-    public void CheckForButtonPressToPushPlayerUp(Rigidbody player)
+    public void CheckForButtonPressToPushPlayerUp(Rigidbody2D player)
     {
         throw new System.NotImplementedException();
     }
