@@ -8,11 +8,21 @@ using UnityEngine.SceneManagement;
 //Model
 public static class LevelLoadingManager
 {
-    static int currenLevel = 1;
+    private static int currentLevel = 1;
 
     public static void StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public static void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public static void ReloadCurrentLevel()
+    {
+        SceneManager.LoadScene(currentLevel);
     }
     
 }
@@ -20,9 +30,19 @@ public static class LevelLoadingManager
 //Presenter
 public class LevelLoadingPresenter
 {
-    internal void StartGame()
+    public void StartGame()
     {
         LevelLoadingManager.StartGame();
+    }
+
+    public void GoToMainMenu()
+    {
+        LevelLoadingManager.GoToMainMenu();
+    }
+
+    public void ReloadCurrentLevel()
+    {
+        LevelLoadingManager.ReloadCurrentLevel();
     }
 }
 
