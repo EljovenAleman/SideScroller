@@ -9,18 +9,22 @@ using UnityEngine.UI;
 public class MenuButtonController : MonoBehaviour
 {    
     [SerializeField] Button startNewButton;
+    [SerializeField] Button continueButton;
     LevelLoadingPresenter levelLoadingPresenter;
+    PlayerPrefsDataManager dataManager;
 
                
     void Start()
     {
         levelLoadingPresenter = new LevelLoadingPresenter();
+        dataManager = FindObjectOfType<PlayerPrefsDataManager>();
         AddListenersToButtons();        
     }
 
     private void AddListenersToButtons()
     {
-        startNewButton.onClick.AddListener(levelLoadingPresenter.StartGame);
+        startNewButton.onClick.AddListener(dataManager.SetCurrentLevelToOneThenLoadIt);
+        continueButton.onClick.AddListener(levelLoadingPresenter.LoadCurrentLevel);
     }
 
     

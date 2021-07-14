@@ -14,7 +14,7 @@ public class YouLoseButtons : MonoBehaviour
 
         levelLoadingPresenter = new LevelLoadingPresenter();
         returnToMenuButton.onClick.AddListener(levelLoadingPresenter.GoToMainMenu);
-        screenButton.onClick.AddListener(levelLoadingPresenter.ReloadCurrentLevel);
+        screenButton.onClick.AddListener(levelLoadingPresenter.LoadCurrentLevel);
 
     }
 
