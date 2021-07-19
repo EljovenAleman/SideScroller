@@ -5,15 +5,25 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
+    PlayerMovement player;
+    public float speed;
 
-    private void Start()
+    void Start()
     {
-        
+        player = FindObjectOfType<PlayerMovement>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        new Vector3(0,0,0);
-        transform.position = new Vector3(playerTransform.position.x + 5, transform.position.y, transform.position.z);
+        if(player.isPlayerAlive)
+        {            
+            transform.position = new Vector3(playerTransform.position.x + 5, transform.position.y, transform.position.z);
+        } 
+        else
+        {
+            transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
+        }
     }
+
+    
 }

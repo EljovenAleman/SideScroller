@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D player;
-    float lateralSpeed = 0.1f;
+    public bool isPlayerAlive = true;
+    private float lateralSpeed = 0.1f;
     IController playerController;
 
     [SerializeField] float xGravity;
