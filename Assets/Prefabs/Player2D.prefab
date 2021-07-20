@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6517240432065458751}
   - component: {fileID: 6517240432065458750}
   - component: {fileID: 6517240432065458722}
+  - component: {fileID: 1248383476807524636}
   m_Layer: 0
   m_Name: Player2D
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6517240432065458747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca98db07eeff16046b39932415ca92ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerAlive: 1
+  isPlayerInControl: 1
+  direction: {x: 0, y: 0, z: 0}
   xGravity: 0
   yGravity: 0
 --- !u!114 &6517240432065458751
@@ -255,3 +259,15 @@ CircleCollider2D:
   m_Offset: {x: 0.047755323, y: 0}
   serializedVersion: 2
   m_Radius: 1.3468436
+--- !u!114 &1248383476807524636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517240432065458747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e98a5d5da34eb4cbe31680054e58fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

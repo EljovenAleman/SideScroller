@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - WinThreshold
+  - Bouncer
+  - LandingSpot
   layers:
   - Default
   - TransparentFX

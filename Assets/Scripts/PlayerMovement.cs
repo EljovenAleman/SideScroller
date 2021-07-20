@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D player;
     public bool isPlayerAlive = true;
-    private float lateralSpeed = 0.1f;
+    public bool isPlayerInControl = true;
+    public float lateralSpeed = 0.1f;
+    public Vector3 direction;
     IController playerController;
 
     [SerializeField] float xGravity;
@@ -28,8 +30,17 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //Physics.gravity = new Vector3(xGravity, yGravity,0);
-        player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
-        playerController.CheckForButtonPressToPushPlayerUp(player);
+
+        if(isPlayerInControl)
+        {
+            player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
+            playerController.CheckForButtonPressToPushPlayerUp(player);
+        }
+        else
+        {
+            player.AddForce(direction * 2f, ForceMode2D.Impulse);
+        }
+        
 
     }
 }

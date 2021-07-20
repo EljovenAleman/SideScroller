@@ -28,7 +28,7 @@ public class CollisionBehaviour : MonoBehaviour
             StartCoroutine(OnPlayerDeath());
             player.isPlayerAlive = false;
                         
-        }
+        }        
         else if(collision.gameObject.tag == "WinThreshold")
         {
             gameObject.SetActive(false);
@@ -36,6 +36,26 @@ public class CollisionBehaviour : MonoBehaviour
         }
 
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bouncer")
+        {
+            var direction = collision.gameObject.transform.Find("LandingSpot").transform.position - player.transform.position;
+            direction = direction.normalized;
+
+            player.direction = direction;
+            player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            player.isPlayerInControl = false;
+
+            Debug.Log(direction);
+        }
+        else if(collision.gameObject.tag == "LandingSpot")
+        {
+            player.isPlayerInControl = true;
+            
+        }
     }
 
     private void DisablePlayerComponents()
