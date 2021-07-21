@@ -15,14 +15,17 @@ public class CollisionBehaviour : MonoBehaviour
         gameCamera = FindObjectOfType<CameraMovement>();
         player = FindObjectOfType<PlayerMovement>();
         levelLoadingPresenter = new LevelLoadingPresenter();
-        canvasManager = FindObjectOfType<CanvasManager>();
+        canvasManager = FindObjectOfType<CanvasManager>();        
     }
-   
+
+    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision detected");
         if (collision.gameObject.tag == "Obstacle")
         {
+            player.isPlayerInControl = false;
             DisablePlayerComponents();
             
             StartCoroutine(OnPlayerDeath());
@@ -48,13 +51,31 @@ public class CollisionBehaviour : MonoBehaviour
             player.direction = direction;
             player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             player.isPlayerInControl = false;
+            player.isPlayerBouncing = true;
 
             Debug.Log(direction);
         }
         else if(collision.gameObject.tag == "LandingSpot")
         {
             player.isPlayerInControl = true;
+            player.isPlayerBouncing = false;
             
+        }
+        else if(collision.gameObject.tag == "Duplicator")
+        {
+            if(player.isPlayerDuplicated == false)
+            {
+                player.isPlayerDuplicated = true;
+                Instantiate(player.duplicatedPlayer);
+            }
+        }
+        else if(collision.gameObject.tag == "Singularizer")
+        {
+            if(player.isPlayerDuplicated)
+            {
+                player.isPlayerDuplicated = false;
+                Destroy(GameObject.FindGameObjectWithTag("DuplicatedPlayer"));
+            }
         }
     }
 

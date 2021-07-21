@@ -5,8 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D player;
+
+    public GameObject duplicatedPlayer;
+    public Collider2D duplicatedPlayerCollider;
+
     public bool isPlayerAlive = true;
     public bool isPlayerInControl = true;
+    public bool isPlayerDuplicated = false;
+    public bool isPlayerBouncing = false;
     public float lateralSpeed = 0.1f;
     public Vector3 direction;
     IController playerController;
@@ -17,12 +23,14 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         playerController = ControllerFactory.GetController();
+        duplicatedPlayerCollider = duplicatedPlayer.GetComponent<Collider2D>();
     }
 
 
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+
         
     }
 
@@ -36,9 +44,13 @@ public class PlayerMovement : MonoBehaviour
             player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
             playerController.CheckForButtonPressToPushPlayerUp(player);
         }
-        else
+        else if(isPlayerBouncing)
         {
             player.AddForce(direction * 2f, ForceMode2D.Impulse);
+        }
+        else
+        {
+            player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
         }
         
 

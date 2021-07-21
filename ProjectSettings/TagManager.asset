@@ -8,6 +8,10 @@ TagManager:
   - WinThreshold
   - Bouncer
   - LandingSpot
+  - Duplicator
+  - Singularizer
+  - Undefined
+  - DuplicatedPlayer
   layers:
   - Default
   - TransparentFX
@@ -17,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - DuplicatePlayer
   - 
   - 
   - 
