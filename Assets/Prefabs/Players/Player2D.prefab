@@ -121,9 +121,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duplicatedPlayer: {fileID: 2136381084001401085, guid: 2dbe2c6928772bf4fb51d96bca34f741,
     type: 3}
+  duplicatedPlayerCollider: {fileID: 2136381084001401060, guid: 2dbe2c6928772bf4fb51d96bca34f741,
+    type: 3}
   isPlayerAlive: 1
   isPlayerInControl: 1
   isPlayerDuplicated: 0
+  isPlayerBouncing: 0
   lateralSpeed: 0.1
   direction: {x: 0, y: 0, z: 0}
   xGravity: 0
