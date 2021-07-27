@@ -832,7 +832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 777131723263812543}
-  speed: 0
+  speed: 0.1
 --- !u!1 &6561447276844633258
 GameObject:
   m_ObjectHideFlags: 0

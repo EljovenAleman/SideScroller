@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isPlayerInControl = true;
     public bool isPlayerDuplicated = false;
     public bool isPlayerBouncing = false;
-    public float lateralSpeed = 0.1f;
+    public float lateralSpeed = 0;
+    private float bounceForce = 105f;
     public Vector3 direction;
     IController playerController;
 
@@ -29,16 +30,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        player = GetComponent<Rigidbody2D>();
-
-        
+        player = GetComponent<Rigidbody2D>();        
     }
 
     
     void FixedUpdate()
     {
-        //Physics.gravity = new Vector3(xGravity, yGravity,0);
-
+        
         if(isPlayerInControl)
         {
             player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
@@ -46,14 +44,13 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(isPlayerBouncing)
         {
-            player.AddForce(direction * 2f, ForceMode2D.Impulse);
+            player.AddForce(direction * bounceForce * Time.deltaTime, ForceMode2D.Impulse);
         }
         else
         {
             player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
         }
         
-
     }
 }
 
@@ -76,13 +73,14 @@ public interface IController
 
 public class PCController : IController
 {
-    public float upwardsForce = 0.5f;
+    //upwardsForce = 0.5f (sin Time.deltaTime)
+    public float upwardsForce = 25f;
     
     public void CheckForButtonPressToPushPlayerUp(Rigidbody2D player)
     {
         if(Input.GetKey("space"))
         {
-            player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
+            player.AddForce(new Vector3(0, upwardsForce * Time.deltaTime, 0), ForceMode2D.Impulse);
         }                
     }
 
@@ -94,10 +92,15 @@ public class PCController : IController
 }
 
 public class MobileController : IController
-{    
+{
+    public float upwardsForce = 25f;
+
     public void CheckForButtonPressToPushPlayerUp(Rigidbody2D player)
     {
-        throw new System.NotImplementedException();
+        if(Input.touchCount > 0)
+        {
+            player.AddForce(new Vector3(0, upwardsForce * Time.deltaTime, 0), ForceMode2D.Impulse);
+        }
     }
 
     public void ReleasePlayer()

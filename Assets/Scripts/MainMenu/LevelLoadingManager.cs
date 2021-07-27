@@ -12,6 +12,8 @@ public static class LevelLoadingManager
     
     public static void StartGame()
     {
+        //testing
+        //SceneManager.LoadScene(6);
         SceneManager.LoadScene(1);
     }
 
