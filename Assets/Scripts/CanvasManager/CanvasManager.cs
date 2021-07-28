@@ -9,7 +9,11 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject youWinCanvasPrefab;
     [SerializeField] Transform cameraTransform;
 
-    
+    private void Start()
+    {
+        
+    }
+
     public void ShowYouLoseScreen()
     {
         youLoseCanvasPrefab.transform.position = cameraTransform.position;

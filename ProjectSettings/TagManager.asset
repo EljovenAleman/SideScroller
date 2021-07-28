@@ -12,6 +12,7 @@ TagManager:
   - Singularizer
   - Undefined
   - DuplicatedPlayer
+  - TopAndBottomLimit
   layers:
   - Default
   - TransparentFX

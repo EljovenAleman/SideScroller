@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4289509941318939850}
   - component: {fileID: 8061801223888545759}
   - component: {fileID: 1850583902451008903}
-  - component: {fileID: 3403317021077079990}
+  - component: {fileID: -5932464713768014827}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Obstacle
+  m_TagString: TopAndBottomLimit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
   m_GeometryCached: 0
---- !u!68 &3403317021077079990
-EdgeCollider2D:
+--- !u!61 &-5932464713768014827
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,13 +168,16 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 47.333942, y: 1.0576679}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 98.89789, y: 2.1153357}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -2.0047855, y: 1.0270151}
-  - {x: -2.020015, y: 2.0001907}
-  - {x: 96.68789, y: 2.0205255}
-  - {x: 96.67566, y: 1.041468}
-  - {x: -0.74733603, y: 1.0270146}
-  - {x: -2.0045955, y: 1.026828}
-  - {x: -2.0047855, y: 1.0270151}

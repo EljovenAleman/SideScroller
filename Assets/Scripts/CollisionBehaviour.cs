@@ -23,7 +23,7 @@ public class CollisionBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision detected");
-        if (collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "TopAndBottomLimit")
         {
             player.isPlayerInControl = false;
             DisablePlayerComponents();

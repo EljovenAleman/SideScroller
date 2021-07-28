@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2186604825986759893}
   - component: {fileID: 5349786449227395008}
   - component: {fileID: 4355437483566828952}
-  - component: {fileID: 784758681926176681}
+  - component: {fileID: -4731156936454113457}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Obstacle
+  m_TagString: TopAndBottomLimit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
   m_GeometryCached: 0
---- !u!68 &784758681926176681
-EdgeCollider2D:
+--- !u!61 &-4731156936454113457
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,13 +168,16 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 47.304813, y: -1.0280867}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 98.74008, y: 2.0561733}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.9538833, y: -1.9611765}
-  - {x: -1.9702413, y: -0.96433294}
-  - {x: 96.57984, y: -0.95211434}
-  - {x: 96.577995, y: -1.9527693}
-  - {x: -1.953683, y: -1.9613634}
-  - {x: -1.9536933, y: -1.9613634}
-  - {x: -1.9538833, y: -1.9611765}

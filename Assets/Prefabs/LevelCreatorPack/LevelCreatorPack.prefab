@@ -361,7 +361,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.8
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.37859556
@@ -568,10 +568,10 @@ GameObject:
   - component: {fileID: 9157482678029445583}
   - component: {fileID: 2391179162978153023}
   - component: {fileID: 5452313819522267299}
-  - component: {fileID: 6377841865926874439}
+  - component: {fileID: 530412112294979821}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Obstacle
+  m_TagString: TopAndBottomLimit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -712,8 +712,8 @@ MonoBehaviour:
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
   m_GeometryCached: 0
---- !u!68 &6377841865926874439
-EdgeCollider2D:
+--- !u!61 &530412112294979821
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -725,16 +725,19 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 47.304813, y: -1.0280867}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 98.74008, y: 2.0561733}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.9538833, y: -1.9611765}
-  - {x: -1.9702413, y: -0.96433294}
-  - {x: 96.57984, y: -0.95211434}
-  - {x: 96.577995, y: -1.9527693}
-  - {x: -1.953683, y: -1.9613634}
-  - {x: -1.9536933, y: -1.9613634}
-  - {x: -1.9538833, y: -1.9611765}
 --- !u!1 &6355198959445504384
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,10 +847,10 @@ GameObject:
   - component: {fileID: 658450119735013675}
   - component: {fileID: 2139284804069030193}
   - component: {fileID: 8078298613015269832}
-  - component: {fileID: 3260635252944620436}
+  - component: {fileID: 2921151263934475424}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Obstacle
+  m_TagString: TopAndBottomLimit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -988,8 +991,8 @@ MonoBehaviour:
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
   m_GeometryCached: 0
---- !u!68 &3260635252944620436
-EdgeCollider2D:
+--- !u!61 &2921151263934475424
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1001,16 +1004,19 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 47.333942, y: 1.0576683}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 98.89789, y: 2.1153357}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -2.0047855, y: 1.0270151}
-  - {x: -2.020015, y: 2.0001907}
-  - {x: 96.68789, y: 2.0205255}
-  - {x: 96.67566, y: 1.041468}
-  - {x: -0.74733603, y: 1.0270146}
-  - {x: -2.0045955, y: 1.026828}
-  - {x: -2.0047855, y: 1.0270151}
 --- !u!1 &7980933353262061396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8555083349681576556}
   - component: {fileID: 471918759325505962}
+  - component: {fileID: 6945073625740215880}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -1090,5 +1097,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2db5dee1affd13f46889adbf25369d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6945073625740215880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986893873371017327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfbede6450ad8941946067538c80bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

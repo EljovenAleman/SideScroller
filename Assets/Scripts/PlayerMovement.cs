@@ -58,7 +58,7 @@ static class ControllerFactory
 {
     public static IController GetController()
     {
-        IController controller = new PCController();
+        IController controller = new MobileController();
 
         return controller;
     }
@@ -93,13 +93,13 @@ public class PCController : IController
 
 public class MobileController : IController
 {
-    public float upwardsForce = 25f;
+    public float upwardsForce = 0.5f;
 
     public void CheckForButtonPressToPushPlayerUp(Rigidbody2D player)
     {
         if(Input.touchCount > 0)
         {
-            player.AddForce(new Vector3(0, upwardsForce * Time.deltaTime, 0), ForceMode2D.Impulse);
+            player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
         }
     }
 

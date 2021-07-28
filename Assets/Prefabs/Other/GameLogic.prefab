@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6417677889105374265}
   - component: {fileID: 6417677889105374266}
+  - component: {fileID: 6913233184983532816}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -43,3 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5dee1affd13f46889adbf25369d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6913233184983532816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417677889105374267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfbede6450ad8941946067538c80bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 0}

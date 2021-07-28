@@ -1729,6 +1729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6024944395046105153, guid: a4404c06e74ce534b9a38fa94954a2ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: TopAndBottomLimit
+      objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -1844,7 +1849,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1
-  m_AllowMSAA: 0
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 0
@@ -5391,6 +5396,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6024944395046105153, guid: a4404c06e74ce534b9a38fa94954a2ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: TopAndBottomLimit
+      objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -8457,5 +8467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameLogic
       objectReference: {fileID: 0}
+    - target: {fileID: 6913233184983532816, guid: cb503a4447aa59e44a4bc9f12b69ec6d,
+        type: 3}
+      propertyPath: myCamera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb503a4447aa59e44a4bc9f12b69ec6d, type: 3}
