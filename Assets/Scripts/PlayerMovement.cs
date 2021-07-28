@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isPlayerInControl = true;
     public bool isPlayerDuplicated = false;
     public bool isPlayerBouncing = false;
-    public float lateralSpeed = 0;
-    private float bounceForce = 105f;
+    public float lateralSpeed = 0.1f;
+    private float bounceForce = 2f;
     public Vector3 direction;
     IController playerController;
 
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         playerController = ControllerFactory.GetController();
-        duplicatedPlayerCollider = duplicatedPlayer.GetComponent<Collider2D>();
+        duplicatedPlayerCollider = duplicatedPlayer.GetComponent<Collider2D>(); 
     }
 
 
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(isPlayerBouncing)
         {
-            player.AddForce(direction * bounceForce * Time.deltaTime, ForceMode2D.Impulse);
+            player.AddForce(direction * bounceForce, ForceMode2D.Impulse);
         }
         else
         {
@@ -73,14 +73,14 @@ public interface IController
 
 public class PCController : IController
 {
-    //upwardsForce = 0.5f (sin Time.deltaTime)
-    public float upwardsForce = 25f;
+    //upwardsForce = 25f (con Time.deltaTime)
+    public float upwardsForce = 0.5f;
     
     public void CheckForButtonPressToPushPlayerUp(Rigidbody2D player)
     {
         if(Input.GetKey("space"))
         {
-            player.AddForce(new Vector3(0, upwardsForce * Time.deltaTime, 0), ForceMode2D.Impulse);
+            player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
         }                
     }
 
