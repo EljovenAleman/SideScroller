@@ -56,9 +56,16 @@ public class PlayerMovement : MonoBehaviour
 
 static class ControllerFactory
 {
+
     public static IController GetController()
     {
+#if UNITY_EDITOR || UNITY_STANDALONE
+        IController controller = new PCController();
+
+#elif UNITY_ANDROID || UNITY_IOS
         IController controller = new MobileController();
+
+#endif
 
         return controller;
     }
