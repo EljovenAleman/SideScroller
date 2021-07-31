@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 4.unity
     guid: 30331b4691d4ace4fa7e39a7c20c2803
   - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: e5d3828e2f473c34b8ccb22c86486559
+  - enabled: 1
     path: Assets/Scenes/CongratulationScreen.unity
     guid: 116dfb8b2b1abfe47af9c9b4fc1c32f2
   - enabled: 1
