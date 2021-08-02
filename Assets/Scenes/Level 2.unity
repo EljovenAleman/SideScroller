@@ -628,6 +628,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.51
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a4920fbb68605547baea42e92894a4d, type: 3}
     - target: {fileID: 3532010566845010963, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[1].position.x
@@ -860,7 +865,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -1348,7 +1353,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -1547,6 +1552,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.86
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a4920fbb68605547baea42e92894a4d, type: 3}
     - target: {fileID: 3532010566845010963, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[2].position.x
@@ -1661,6 +1671,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.77
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6180b9ba500bddb4397720009c60a287, type: 3}
     - target: {fileID: 4064023060353330253, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Points.Array.size
@@ -1896,6 +1911,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.91
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d7c0ec4ad4a9b642bd4af858d0e5f60, type: 3}
     - target: {fileID: 3532010566845010963, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[2].position.x
@@ -2064,7 +2084,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -2711,7 +2731,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -2940,6 +2960,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.67
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6180b9ba500bddb4397720009c60a287, type: 3}
     - target: {fileID: 3532010566845010963, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.size
@@ -3377,6 +3402,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.73
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a4920fbb68605547baea42e92894a4d, type: 3}
     - target: {fileID: 3532010566845010963, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[2].position.x
@@ -3684,7 +3714,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -4294,7 +4324,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -4753,7 +4783,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -4983,7 +5013,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
@@ -5324,6 +5354,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.17
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d7c0ec4ad4a9b642bd4af858d0e5f60, type: 3}
     - target: {fileID: 5137452530731628107, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -5404,6 +5439,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.603004
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a4920fbb68605547baea42e92894a4d, type: 3}
     - target: {fileID: 5137452530731628107, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -5655,6 +5695,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.38
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a4920fbb68605547baea42e92894a4d, type: 3}
     - target: {fileID: 3532010566845010963, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.size
@@ -6049,6 +6094,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5.03
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d7c0ec4ad4a9b642bd4af858d0e5f60, type: 3}
     - target: {fileID: 3532010566845010963, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[1].position.x
@@ -6206,6 +6256,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -42.546
       objectReference: {fileID: 0}
+    - target: {fileID: 2622863261986516492, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6180b9ba500bddb4397720009c60a287, type: 3}
     - target: {fileID: 5137452530731628107, guid: 182e8c62d2b80284aa0cb0b25e3316bc,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -6679,7 +6734,7 @@ PrefabInstance:
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346148579609905657, guid: a4404c06e74ce534b9a38fa94954a2ee,
         type: 3}

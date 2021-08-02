@@ -7,6 +7,9 @@ public class DuplicatedPlayerCollisionBehaviour : MonoBehaviour
     PlayerMovement player;
     DuplicatedPlayerBehaviour duplicatedPlayer;
 
+    //Audio
+    AudioSource objectSound;
+
 
     private void Start()
     {
@@ -27,6 +30,9 @@ public class DuplicatedPlayerCollisionBehaviour : MonoBehaviour
 
 
             player.isPlayerInControl = false;
+
+            objectSound = gameObject.GetComponent<AudioSource>();
+            objectSound.Play();
 
         }
         

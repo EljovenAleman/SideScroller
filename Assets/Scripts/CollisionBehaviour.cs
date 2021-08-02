@@ -10,6 +10,9 @@ public class CollisionBehaviour : MonoBehaviour
     PlayerMovement player;
     CanvasManager canvasManager;
 
+    //Audio
+    AudioSource objectSound;
+
     void Start()
     {
         gameCamera = FindObjectOfType<CameraMovement>();
@@ -30,7 +33,10 @@ public class CollisionBehaviour : MonoBehaviour
             
             StartCoroutine(OnPlayerDeath());
             player.isPlayerAlive = false;
-                        
+
+            objectSound = gameObject.GetComponent<AudioSource>();
+            objectSound.Play();
+
         }        
         else if(collision.gameObject.tag == "WinThreshold")
         {
@@ -52,6 +58,9 @@ public class CollisionBehaviour : MonoBehaviour
             player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             player.isPlayerInControl = false;
             player.isPlayerBouncing = true;
+
+            objectSound = collision.gameObject.GetComponent<AudioSource>();
+            objectSound.Play();
 
             Debug.Log(direction);
         }

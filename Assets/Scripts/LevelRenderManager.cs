@@ -19,7 +19,7 @@ public class LevelRenderManager : MonoBehaviour
         foreach(GameObject obstacle in obstaclesList)
         {
             var distance = Vector2.Distance(myCamera.transform.position, obstacle.transform.position);
-            Debug.Log(distance);
+            
             if (distance >= 20)
             {
                 obstacle.SetActive(false);
