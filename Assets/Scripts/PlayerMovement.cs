@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isPlayerBouncing = false;
     public float lateralSpeed = 0.1f;
     private float bounceForce = 2f;
+    
     public Vector3 direction;
     IController playerController;
 
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if(isPlayerInControl)
         {
             player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
-            playerController.CheckForButtonPressToPushPlayerUp(player);
+            playerController.CheckForButtonPressToPushPlayerUp(player);                
         }
         else if(isPlayerBouncing)
         {
@@ -82,13 +83,18 @@ public class PCController : IController
 {
     //upwardsForce = 25f (con Time.deltaTime)
     public float upwardsForce = 0.5f;
-    
+    public float rotationSpeedCap = 100;
+
     public void CheckForButtonPressToPushPlayerUp(Rigidbody2D player)
     {
         if(Input.GetKey("space"))
-        {
+        {            
             player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
-        }                
+            player.AddTorque(1f, ForceMode2D.Force);
+          
+            Debug.Log(player.rotation);
+        }        
+        
     }
 
 
@@ -107,6 +113,7 @@ public class MobileController : IController
         if(Input.touchCount > 0)
         {
             player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
+            player.AddTorque(1f, ForceMode2D.Force);
         }
     }
 

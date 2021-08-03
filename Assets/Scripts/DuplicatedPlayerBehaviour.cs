@@ -15,5 +15,6 @@ public class DuplicatedPlayerBehaviour : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y * -1, player.transform.position.z);
+        transform.rotation = player.transform.rotation;
     }
 }
