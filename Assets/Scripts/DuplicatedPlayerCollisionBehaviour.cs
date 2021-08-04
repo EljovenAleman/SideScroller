@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DuplicatedPlayerCollisionBehaviour : MonoBehaviour
 {
+    ParticleSystem myParticleSystem;
+
     PlayerMovement player;
     DuplicatedPlayerBehaviour duplicatedPlayer;
 
@@ -42,17 +44,12 @@ public class DuplicatedPlayerCollisionBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.gameObject.tag == "Bouncer")
+        if (collision.gameObject.tag == "Bouncer")
         {
-            var direction = collision.gameObject.transform.Find("LandingSpot").transform.position - duplicatedPlayer.transform.position;
-            direction = direction.normalized;
-
-            duplicatedPlayer.direction = direction;
-            duplicatedPlayer.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            duplicatedPlayer.isPlayerInControl = false;
-
-            Debug.Log(direction);
+            myParticleSystem = collision.GetComponent<ParticleSystem>();
+            myParticleSystem.Play();
         }
+        /*
         else if (collision.gameObject.tag == "LandingSpot")
         {
             duplicatedPlayer.isPlayerInControl = true;

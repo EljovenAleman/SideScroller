@@ -91,8 +91,7 @@ public class PCController : IController
         {            
             player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
             player.AddTorque(1f, ForceMode2D.Force);
-          
-            Debug.Log(player.rotation);
+                      
         }        
         
     }

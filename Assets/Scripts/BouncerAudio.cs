@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BouncerAudio : MonoBehaviour
 {
-    public AudioSource audio;
+    public AudioSource myAudio;
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        myAudio = GetComponent<AudioSource>();
     }
 }

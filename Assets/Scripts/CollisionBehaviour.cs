@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CollisionBehaviour : MonoBehaviour
 {
+    ParticleSystem myParticleSystem;
     LevelLoadingPresenter levelLoadingPresenter;
     CameraMovement gameCamera;
     PlayerMovement player;
@@ -36,6 +37,8 @@ public class CollisionBehaviour : MonoBehaviour
 
             objectSound = gameObject.GetComponent<AudioSource>();
             objectSound.Play();
+            myParticleSystem = gameObject.GetComponent<ParticleSystem>();
+            myParticleSystem.Play();
 
         }        
         else if(collision.gameObject.tag == "WinThreshold")
@@ -61,6 +64,8 @@ public class CollisionBehaviour : MonoBehaviour
 
             objectSound = collision.gameObject.GetComponent<AudioSource>();
             objectSound.Play();
+            myParticleSystem = collision.GetComponent<ParticleSystem>();
+            myParticleSystem.Play();
 
             Debug.Log(direction);
         }

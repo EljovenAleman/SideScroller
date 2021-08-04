@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839983991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.929, y: -0.019314766, z: 37.49}
+  m_LocalPosition: {x: 45.929, y: -0.019314766, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -647,21 +647,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7785462017926828739, guid: cfd424882a1b0b240960d12703e88986,
+    - target: {fileID: 2543453980411261881, guid: cfd424882a1b0b240960d12703e88986,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.81897
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7785462017926828739, guid: cfd424882a1b0b240960d12703e88986,
+    - target: {fileID: 2543453980411261881, guid: cfd424882a1b0b240960d12703e88986,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.6134725
-      objectReference: {fileID: 0}
-    - target: {fileID: 7785462017926828739, guid: cfd424882a1b0b240960d12703e88986,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -149.20717
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7785462017926828739, guid: cfd424882a1b0b240960d12703e88986,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -706,6 +701,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelCreatorPack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8429189348572602080, guid: cfd424882a1b0b240960d12703e88986,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8429189348572602081, guid: cfd424882a1b0b240960d12703e88986,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfd424882a1b0b240960d12703e88986, type: 3}
