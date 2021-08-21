@@ -51,11 +51,12 @@ public class PlayerAnimation : MonoBehaviour
         {
             player.drag = 0;                      
             player.transform.localScale = new Vector3(player.transform.localScale.x + 0.025f, player.transform.localScale.y + 0.025f, player.transform.localScale.z);
-            playerTrail.startWidth = playerTrail.startWidth + 0.025f;
+            playerTrail.startWidth = playerTrail.startWidth + 0.035f;
         }
         else if (time >= 5.3)
         {
-            playerTrail.time = 1000;
+            
+            playerTrail.time = Mathf.Infinity;
             player.angularDrag = 0;
             player.constraints = RigidbodyConstraints2D.FreezePosition;
         }
