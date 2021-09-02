@@ -10,15 +10,21 @@ public class YouLoseButtons : MonoBehaviour
     private Camera myCamera;
     LevelLoadingPresenter levelLoadingPresenter;
 
+    BackgroundMusicPresenter backgroundMusicPresenter;
+
     void Start()
     {
 
         levelLoadingPresenter = new LevelLoadingPresenter();
+        backgroundMusicPresenter = FindObjectOfType<BackgroundMusicPresenter>();
+
         myCamera = FindObjectOfType<Camera>();
         var myCanvas = GetComponent<Canvas>();
         myCanvas.worldCamera = myCamera;
         myCanvas.planeDistance = 9;
         returnToMenuButton.onClick.AddListener(levelLoadingPresenter.GoToMainMenu);
+        returnToMenuButton.onClick.AddListener(() => backgroundMusicPresenter.CollectTracksAndSendToManager());
+
         screenButton.onClick.AddListener(levelLoadingPresenter.LoadCurrentLevel);
 
     }

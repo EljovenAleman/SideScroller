@@ -24,22 +24,31 @@ public class PlayerAnimation : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        if(time< 3)
+        {
+            player.bodyType = RigidbodyType2D.Static;
+        }
+        else
+        {
+            player.bodyType = RigidbodyType2D.Dynamic;
+        }
         
-        if(time < 4.5)
+        if(time < 7.5)
         {
             //player.transform.position = new Vector3(player.transform.position.x + lateralSpeed, player.transform.position.y, player.transform.position.z);
             player.AddForce(new Vector3(0.2f, 0, 0), ForceMode2D.Impulse);
-            if(time > 0.5 && time < 1)
+            if(time > 3.5 && time < 4)
             {
                 player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
                 player.AddTorque(1f, ForceMode2D.Force);
             }
-            else if (time > 1.5 && time < 2)
+            else if (time > 4.5 && time < 5)
             {
                 player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
                 player.AddTorque(1f, ForceMode2D.Force);
             }
-            else if (time > 2.5 && time < 3.2)
+            else if (time > 5.5 && time < 6.2)
             {
                 player.AddForce(new Vector3(0.2f, 0, 0), ForceMode2D.Impulse);
                 player.AddForce(new Vector3(0, upwardsForce, 0), ForceMode2D.Impulse);
@@ -47,13 +56,13 @@ public class PlayerAnimation : MonoBehaviour
             }            
 
         }
-        else if (time >= 4.5 && time < 5.3)
+        else if (time >= 7.5 && time < 8.3)
         {
             player.drag = 0;                      
             player.transform.localScale = new Vector3(player.transform.localScale.x + 0.025f, player.transform.localScale.y + 0.025f, player.transform.localScale.z);
             playerTrail.startWidth = playerTrail.startWidth + 0.035f;
         }
-        else if (time >= 5.3)
+        else if (time >= 8.3)
         {
             
             playerTrail.time = Mathf.Infinity;

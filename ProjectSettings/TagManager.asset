@@ -13,6 +13,7 @@ TagManager:
   - Undefined
   - DuplicatedPlayer
   - TopAndBottomLimit
+  - BackgroundMusic
   layers:
   - Default
   - TransparentFX

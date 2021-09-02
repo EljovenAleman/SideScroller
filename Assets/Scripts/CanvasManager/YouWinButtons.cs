@@ -12,9 +12,14 @@ public class YouWinButtons : MonoBehaviour
     
     LevelLoadingPresenter levelLoadingPresenter;
 
+    BackgroundMusicPresenter backgroundMusicPresenter;
+
     void Start()
     {
         levelLoadingPresenter = new LevelLoadingPresenter();
+        backgroundMusicPresenter = FindObjectOfType<BackgroundMusicPresenter>();
+        
+
         dataManager = FindObjectOfType<PlayerPrefsDataManager>();
         myCamera = FindObjectOfType<Camera>();
         var myCanvas = GetComponent<Canvas>();
@@ -22,6 +27,12 @@ public class YouWinButtons : MonoBehaviour
         myCanvas.planeDistance = 9;
 
         returnToMenuButton.onClick.AddListener(levelLoadingPresenter.GoToMainMenu);
+        returnToMenuButton.onClick.AddListener(() => backgroundMusicPresenter.CollectTracksAndSendToManager());
+
         nextLevelButton.onClick.AddListener(dataManager.SetCurrentLevelToNextThenLoadIt);
+        nextLevelButton.onClick.AddListener(() => backgroundMusicPresenter.CollectTracksAndSendToManager());
+
+
+
     }
 }

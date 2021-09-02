@@ -11,20 +11,28 @@ public class MenuButtonController : MonoBehaviour
     [SerializeField] Button startNewButton;
     [SerializeField] Button continueButton;
     LevelLoadingPresenter levelLoadingPresenter;
+    BackgroundMusicPresenter backgroundMusicPresenter;
     PlayerPrefsDataManager dataManager;
 
                
     void Start()
     {
+        backgroundMusicPresenter = FindObjectOfType<BackgroundMusicPresenter>();
         levelLoadingPresenter = new LevelLoadingPresenter();
         dataManager = FindObjectOfType<PlayerPrefsDataManager>();
         AddListenersToButtons();        
     }
 
-    private void AddListenersToButtons()
+    public void AddListenersToButtons()
     {
+        
         startNewButton.onClick.AddListener(dataManager.SetCurrentLevelToOneThenLoadIt);
+        startNewButton.onClick.AddListener(() => backgroundMusicPresenter.CollectTracksAndSendToManager());
+
+
         continueButton.onClick.AddListener(levelLoadingPresenter.LoadCurrentLevel);
+        continueButton.onClick.AddListener(() => backgroundMusicPresenter.CollectTracksAndSendToManager());
+
     }
 
     

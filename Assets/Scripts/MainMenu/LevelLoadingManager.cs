@@ -8,17 +8,19 @@ using UnityEngine.SceneManagement;
 public static class LevelLoadingManager
 {
     //este int es public solo por test
-    public static int currentLevel = 1;
+    public static int currentLevel = 0;
     
     public static void StartGame()
     {
         //testing
         //SceneManager.LoadScene(6);
+        currentLevel = 1;
         SceneManager.LoadScene(1);
     }
 
     public static void GoToMainMenu()
     {
+        currentLevel = 0;
         SceneManager.LoadScene(0);
     }
 
@@ -28,7 +30,7 @@ public static class LevelLoadingManager
     }
 
     public static int GetCurrentLevel()
-    {
+    {        
         return currentLevel;
     }
 
@@ -38,8 +40,9 @@ public static class LevelLoadingManager
     }
 
     public static void LoadNextLevel()
-    {                
+    {        
         SceneManager.LoadScene(currentLevel + 1);
+        currentLevel += 1;
     }
         
 }
@@ -47,6 +50,7 @@ public static class LevelLoadingManager
 //Presenter
 public class LevelLoadingPresenter
 {
+    public BackgroundMusicPresenter backgroundMusicPresenter;
     public void StartNewGame()
     {
         LevelLoadingManager.StartGame();
@@ -74,7 +78,7 @@ public class LevelLoadingPresenter
 
     public void LoadNextLevel()
     {
-        LevelLoadingManager.LoadNextLevel();
+        LevelLoadingManager.LoadNextLevel();        
     }
 }
 
