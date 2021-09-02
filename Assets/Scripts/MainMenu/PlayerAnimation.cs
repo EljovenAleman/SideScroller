@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    Rigidbody2D player;
+    Rigidbody2D player;   
     TrailRenderer playerTrail;
+
+    [SerializeField] GameObject buttons;
+    [SerializeField] Transform gameTitleTransform;
     public float lateralSpeed = 0.1f;
     public float upwardsForce = 0.5f;
     float time = 0;
@@ -61,6 +64,8 @@ public class PlayerAnimation : MonoBehaviour
             player.drag = 0;                      
             player.transform.localScale = new Vector3(player.transform.localScale.x + 0.025f, player.transform.localScale.y + 0.025f, player.transform.localScale.z);
             playerTrail.startWidth = playerTrail.startWidth + 0.035f;
+
+            gameTitleTransform.localScale = new Vector3(gameTitleTransform.localScale.x + 5, gameTitleTransform.localScale.y + 5, gameTitleTransform.localScale.z);
         }
         else if (time >= 8.3)
         {
@@ -68,6 +73,12 @@ public class PlayerAnimation : MonoBehaviour
             playerTrail.time = Mathf.Infinity;
             player.angularDrag = 0;
             player.constraints = RigidbodyConstraints2D.FreezePosition;
+
+           
+        }
+        if(time >= 12)
+        {
+            buttons.SetActive(true);
         }
     }
 }
